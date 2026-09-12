@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPDP Compliance Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--mc-orange)" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>DPDP Compliance Engine</span>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+            <div class="nav-links">
+                <a href="#architecture">Architecture</a>
+                <a href="#example">How It Works</a>
+                <a href="#dpdp-map">DPDP Penalties</a>
+                <a href="https://github.com/abhinavsricharan/dpdp-compliance-engine" target="_blank" class="btn-primary">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <span class="btn-text">View GitHub</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-content">
+            <h1>Automate DPDP Audits with<br><span class="text-gradient">Hybrid AI Architecture</span></h1>
+            <p>A universal compliance engine that bridges lightning-fast static AST analysis with deep semantic evaluation using Bring-Your-Own-LLM (BYO-LLM) capabilities.</p>
+            <div class="hero-actions">
+                <a href="#architecture" class="btn-primary">Explore Architecture</a>
+                <a href="#example" class="btn-secondary">See it in Action</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Language Support Strip -->
+    <section class="language-strip">
+        <p class="strip-title">NATIVELY SUPPORTING 30+ ENTERPRISE LANGUAGES & FRAMEWORKS</p>
+        <div class="marquee">
+            <div class="marquee-track">
+                <!-- Group 1 -->
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#"><span>C# (.NET)</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java"><span>Java</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JS"><span>JavaScript</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TS"><span>TypeScript</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" alt="Go"><span>Go</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg" alt="Rust"><span>Rust</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original.svg" alt="Ruby"><span>Ruby</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP"><span>PHP</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" alt="Kotlin"><span>Kotlin</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg" alt="Swift"><span>Swift</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scala/scala-original.svg" alt="Scala"><span>Scala</span></div>
+                
+                <!-- Group 2 (Duplicated for infinite scroll) -->
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#"><span>C# (.NET)</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java"><span>Java</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JS"><span>JavaScript</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TS"><span>TypeScript</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" alt="Go"><span>Go</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg" alt="Rust"><span>Rust</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original.svg" alt="Ruby"><span>Ruby</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP"><span>PHP</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" alt="Kotlin"><span>Kotlin</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg" alt="Swift"><span>Swift</span></div>
+                <div class="lang-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scala/scala-original.svg" alt="Scala"><span>Scala</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Flow -->
+    <section id="architecture" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Language-Agnostic Architecture</h2>
+                <p>Designed for scale. The engine standardizes security checks across any codebase, utilizing your choice of localized or external AI models.</p>
+            </div>
+            
+            <div class="arch-flow">
+                <!-- Step 1 -->
+                <div class="arch-card">
+                    <div class="arch-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                    </div>
+                    <h3>1. Target Codebase Mount</h3>
+                    <p>Mount any enterprise repository via Docker volume. The engine parses the raw AST (Abstract Syntax Tree) regardless of the underlying programming language.</p>
+                </div>
+
+                <div class="arch-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div>
+
+                <!-- Step 2 -->
+                <div class="arch-card">
+                    <div class="arch-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3>2. High-Speed Static Engine</h3>
+                    <p>Semgrep rapidly executes hundreds of custom DPDP YAML rules across millions of lines of code in milliseconds, acting as a broad filter for potential privacy violations.</p>
+                </div>
+
+                <div class="arch-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div>
+
+                <!-- Step 3 -->
+                <div class="arch-card highlight-border">
+                    <div class="arch-icon text-gradient">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m14-6h2m-2 6h2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+                    </div>
+                    <h3>3. BYO-LLM Evaluator</h3>
+                    <p>Connect to an air-gapped <strong>Local Ollama</strong> instance or <strong>External APIs</strong> (OpenAI/Azure). The LLM reads the business logic around flagged AST nodes to confidently filter out false positives.</p>
+                </div>
+
+                <div class="arch-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div>
+
+                <!-- Step 4 -->
+                <div class="arch-card">
+                    <div class="arch-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3>4. Unified Dashboard</h3>
+                    <p>Results are consolidated into a Streamlit UI, providing audit trails, violation severity reports, and one-click CSV/PDF export functionality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CI/CD Section -->
+    <section class="section">
+        <div class="container">
+            <div class="cicd-banner">
+                <div class="cicd-text">
+                    <h2>Seamless CI/CD Integration</h2>
+                    <p>Shift-left security. The compliance engine hooks directly into your enterprise <strong>GitHub Actions</strong> pipelines, automatically annotating pull requests with DPDP violations before code is ever merged into production.</p>
+                </div>
+                <div class="cicd-visual">
+                    <div class="mock-pr">
+                        <div class="pr-header">
+                            <span class="pr-icon"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 6L6 18M6 6l12 12"/></svg></span> Checks failed: 1 DPDP Violation
+                        </div>
+                        <div class="pr-body">
+                            <code>marketing_tracker.js</code>
+                            <div class="pr-annotation">
+                                <strong>Compliance Engine / Semgrep</strong><br>
+                                DPDP Section 9 Risk: Unverified age data transmission.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DPDP Map Section -->
+    <section id="dpdp-map" class="section bg-subtle">
+        <div class="container">
+            <div class="section-header">
+                <h2>DPDP Act Breakdown & Penalties</h2>
+                <p>Translating the legal rights and obligations of India's Digital Personal Data Protection Act (2023) into automatable codebase checks.</p>
+            </div>
+            
+            <div class="dpdp-grid">
+                <div class="dpdp-card">
+                    <div class="dpdp-section-badge">Section 3</div>
+                    <h3>Territorial Scope</h3>
+                    <p>Applies to digital personal data processed within India or outside India if offering goods/services to Indian residents.</p>
+                </div>
+                <div class="dpdp-card">
+                    <div class="dpdp-section-badge">Section 5</div>
+                    <h3>Itemized Notice</h3>
+                    <p>Fiduciaries must provide clear, itemized notice of data collected and its purpose before seeking consent.</p>
+                </div>
+                <div class="dpdp-card">
+                    <div class="dpdp-section-badge">Section 6 & 7</div>
+                    <h3>Consent & Legitimate Use</h3>
+                    <p>Scans for data processing functions that fail to explicitly verify boolean consent flags prior to execution.</p>
+                </div>
+                <div class="dpdp-card">
+                    <div class="dpdp-section-badge penalty">Section 8 Penalty</div>
+                    <h3>₹250 Crores Fine</h3>
+                    <p>Data minimization & security. The engine detects unencrypted PII (Aadhaar/PAN) to proactively prevent breaches.</p>
+                </div>
+                <div class="dpdp-card">
+                    <div class="dpdp-section-badge penalty">Section 9 Penalty</div>
+                    <h3>₹200 Crores Fine</h3>
+                    <p>Children's Data rules. The engine flags behavioral tracking algorithms that lack strict age verification barriers (&lt;18).</p>
+                </div>
+                <div class="dpdp-card">
+                    <div class="dpdp-section-badge">Section 10</div>
+                    <h3>Significant Fiduciaries</h3>
+                    <p>Additional obligations (DPO, Data Auditors) for fiduciaries handling large data volumes or high-risk profiling.</p>
+                </div>
+                <div class="dpdp-card">
+                    <div class="dpdp-section-badge">Section 11</div>
+                    <h3>Right to Access</h3>
+                    <p>Data Principals have the absolute right to request a summary of personal data being processed by the fiduciary.</p>
+                </div>
+                <div class="dpdp-card">
+                    <div class="dpdp-section-badge">Section 12</div>
+                    <h3>Right to Erasure</h3>
+                    <p>Identifies instances of non-compliant "soft deletion" when an absolute data purge is legally mandated.</p>
+                </div>
+                <div class="dpdp-card">
+                    <div class="dpdp-section-badge">Section 13 & 15</div>
+                    <h3>Grievance & Duties</h3>
+                    <p>Right to readily available grievance redressal mechanisms, paired with the duty not to file false grievances.</p>
+                </div>
+                <div class="dpdp-card">
+                    <div class="dpdp-section-badge">Section 16</div>
+                    <h3>Cross-Border Transfers</h3>
+                    <p>Analyzes API client payloads to prevent sensitive data objects from being transmitted to negative-listed jurisdictions.</p>
+                </div>
+                <div class="dpdp-card">
+                    <div class="dpdp-section-badge">Section 17</div>
+                    <h3>Exemptions</h3>
+                    <p>State security, legal compliance, and research exemptions applied to specific data processing pipelines.</p>
+                </div>
+                <div class="dpdp-card">
+                    <div class="dpdp-section-badge penalty">Appeals & Admin</div>
+                    <h3>Data Protection Board</h3>
+                    <p>The regulatory authority investigating breaches, with TDSAT acting as the official Appellate Tribunal for disputes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Working Example Section -->
+    <section id="example" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works: Real-Time Execution</h2>
+                <p>See exactly how the engine orchestrates the flow from raw source code to an LLM-verified compliance verdict across multiple languages.</p>
+            </div>
+
+            <div class="example-container">
+                <div class="code-window">
+                    <div class="code-tabs">
+                        <button class="tab-btn active" onclick="switchTab('java')">EmployeeService.java</button>
+                        <button class="tab-btn" onclick="switchTab('python')">ConsentAPI.py</button>
+                        <button class="tab-btn" onclick="switchTab('js')">MarketingTracker.js</button>
+                        <button class="tab-btn" onclick="switchTab('sql')">schema.sql</button>
+                    </div>
+                    
+                    <div class="code-header">
+                        <div class="filename" id="example-filename">TemplatePath/EmployeeService.java</div>
+                    </div>
+                    
+                    <!-- Java Tab -->
+                    <pre id="code-java" class="code-content active"><code><span class="keyword">public void</span> <span class="method">saveEmployeeAadhaar</span>(String aadhaar) {
+    <span class="comment">// Vulnerability: Storing raw PII without encryption</span>
+    String query = <span class="string">"INSERT INTO employees (aadhaar) VALUES ('"</span> + aadhaar + <span class="string">"')"</span>;
+    db.execute(query);
+}</code></pre>
+
+                    <!-- Python Tab -->
+                    <pre id="code-python" class="code-content" style="display:none;"><code><span class="keyword">def</span> <span class="method">process_user_data</span>(data):
+    <span class="comment"># Vulnerability: No boolean consent verification before processing</span>
+    analytics_engine.track(data)
+    <span class="keyword">return</span> <span class="string">"Success"</span></code></pre>
+
+                    <!-- JS Tab -->
+                    <pre id="code-js" class="code-content" style="display:none;"><code><span class="keyword">function</span> <span class="method">serveTargetedAds</span>(user) {
+    <span class="comment">// Vulnerability: No check for user.age >= 18</span>
+    adNetwork.push(user.behaviorProfile);
+}</code></pre>
+
+                    <!-- SQL Tab -->
+                    <pre id="code-sql" class="code-content" style="display:none;"><code><span class="keyword">CREATE TABLE</span> <span class="method">users</span> (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    <span class="comment">-- Vulnerability: Natively storing Aadhaar in schema without encryption</span>
+    aadhaar_number VARCHAR(12)
+);</code></pre>
+                </div>
+
+                <div class="example-flow">
+                    <div class="flow-step">
+                        <span class="badge danger" id="flow-step1-badge">Step 1: Static Engine Flag</span>
+                        <p id="flow-step1-text">Semgrep YAML regex matches: <code>INSERT INTO ... {VAR}</code> (Section 8 Violation).</p>
+                    </div>
+                    <div class="flow-divider"></div>
+                    <div class="flow-step">
+                        <span class="badge warning">Step 2: Semantic Verification</span>
+                        <p id="flow-step2-text"><strong>BYO-LLM Context Query:</strong> "Analyze the AST trace. Are cryptographic transformations applied prior to database execution?"</p>
+                    </div>
+                    <div class="flow-divider"></div>
+                    <div class="flow-step">
+                        <span class="badge success" id="flow-step3-badge">Step 3: Final OPA Verdict</span>
+                        <p id="flow-step3-text"><strong>DENIED [DPDP Section 8]:</strong> No cryptographic functions detected. Deployment blocked to prevent ₹250 Crores penalty exposure.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Streamlit Dashboard Mockup -->
+            <div class="dashboard-wrapper">
+                <div class="dashboard-header-title">Step 4: Streamlit Outlook Board</div>
+                <div class="dashboard-preview">
+                    <div class="dashboard-topbar">
+                        <span class="title">dpdp_engine_dashboard &bull; Streamlit</span>
+                    </div>
+                    <div class="dashboard-body">
+                        <div class="dashboard-sidebar">
+                            <button class="sidebar-item active" onclick="switchDashboardTab('reports', this)">Violation Reports</button>
+                            <button class="sidebar-item" onclick="switchDashboardTab('command', this)">Command Center</button>
+                            <button class="sidebar-item" onclick="switchDashboardTab('codebase', this)">Codebase Explorer</button>
+                            <button class="sidebar-item" onclick="switchDashboardTab('settings', this)">BYO-LLM Settings</button>
+                            <div class="sidebar-info">Engine: v2.4.1<br>Model: Llama3 (Local)</div>
+                        </div>
+                        <div class="dashboard-main">
+                            <!-- Tab: Violation Reports -->
+                            <div id="dash-reports" class="dash-view">
+                                <h2>Deployment Blocked: Critical Violations Detected</h2>
+                                <div class="dashboard-metrics">
+                                    <div class="metric-card"><span class="metric-value text-danger">3</span><span class="metric-label">Blocking Violations</span></div>
+                                    <div class="metric-card"><span class="metric-value">1,402</span><span class="metric-label">Files Scanned (AST)</span></div>
+                                    <div class="metric-card"><span class="metric-value text-warning">₹450 CR</span><span class="metric-label">Total Penalty Risk</span></div>
+                                </div>
+                                <table class="dashboard-table">
+                                    <thead>
+                                        <tr>
+                                            <th>File Path</th>
+                                            <th>DPDP Section</th>
+                                            <th>Verdict</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>TemplatePath/schema.sql</td>
+                                            <td>Section 8</td>
+                                            <td><span class="badge danger">DENIED</span></td>
+                                        </tr>
+                                        <!-- Remediation Suggestion -->
+                                        <tr class="remediation-row">
+                                            <td colspan="3">
+                                                <div class="remediation-box">
+                                                    <strong>LLM Auto-Remediation (Ollama Llama3):</strong><br>
+                                                    Modify schema to use application-level encryption for <code>aadhaar_number</code> or wrap column in <code>pgcrypto</code> PGP encryption function.
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>TemplatePath/MarketingTracker.js</td>
+                                            <td>Section 9</td>
+                                            <td><span class="badge danger">DENIED</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TemplatePath/EmployeeService.java</td>
+                                            <td>Section 8</td>
+                                            <td><span class="badge danger">DENIED</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <!-- Tab: Command Center -->
+                            <div id="dash-command" class="dash-view" style="display: none;">
+                                <h2>Command Center: Engine Controls</h2>
+                                <div class="command-grid">
+                                    <div class="command-card">
+                                        <h4>Run Deep Semantic Audit</h4>
+                                        <p>Trigger the BYO-LLM to manually re-evaluate all flagged AST nodes against DPDP regulations.</p>
+                                        <button class="dash-btn primary">Execute Scan</button>
+                                    </div>
+                                    <div class="command-card">
+                                        <h4>Export Compliance Report</h4>
+                                        <p>Generate a cryptographically signed CSV/PDF audit trail for regulatory submission.</p>
+                                        <div style="display: flex; gap: 8px;">
+                                            <button class="dash-btn">Download CSV</button>
+                                            <button class="dash-btn">Export PDF</button>
+                                        </div>
+                                    </div>
+                                    <div class="command-card">
+                                        <h4>Force Override & Deploy</h4>
+                                        <p>Bypass the DPDP block. Requires explicit authorization and logs action to audit board.</p>
+                                        <button class="dash-btn danger">Override Block</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Tab: Codebase Explorer -->
+                            <div id="dash-codebase" class="dash-view" style="display: none;">
+                                <h2>Codebase Explorer: Mounted Volumes</h2>
+                                <div class="file-tree">
+                                    <div class="tree-folder">TemplatePath/</div>
+                                    <div class="tree-file">EmployeeService.java <span class="sec-tag">Sec 8</span></div>
+                                    <div class="tree-file">MarketingTracker.js <span class="sec-tag">Sec 9</span></div>
+                                    <div class="tree-file">ConsentAPI.py <span class="sec-tag">Sec 6</span></div>
+                                    <div class="tree-file text-danger">schema.sql <span class="sec-tag bg-danger">Critical: Sec 8</span></div>
+                                </div>
+                            </div>
+
+                            <!-- Tab: BYO-LLM Settings -->
+                            <div id="dash-settings" class="dash-view" style="display: none;">
+                                <h2>BYO-LLM Integration Settings</h2>
+                                <p style="color: #a1a1aa; margin-bottom: 24px;">Configure your semantic evaluator. For air-gapped security, choose a local instance.</p>
+                                <div class="command-grid">
+                                    <div class="command-card active-llm" style="border-color: #27c93f; background: rgba(39, 201, 63, 0.05);">
+                                        <h4>Local: Ollama</h4>
+                                        <p>Zero-cost, on-premise evaluation ensuring code never leaves the network.</p>
+                                        <span class="badge" style="background: #27c93f; color: #fff;">Connected: qwen2.5-coder</span>
+                                    </div>
+                                    <div class="command-card">
+                                        <h4>External: Azure OpenAI</h4>
+                                        <p>High-performance remote model for less sensitive microservices.</p>
+                                        <button class="dash-btn">Connect API</button>
+                                    </div>
+                                    <div class="command-card">
+                                        <h4>External: Anthropic</h4>
+                                        <p>Claude 3.5 Sonnet integration for complex reasoning pipelines.</p>
+                                        <button class="dash-btn">Connect API</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="logo">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--text-muted)" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>DPDP Compliance Engine</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
